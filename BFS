@@ -1,0 +1,20 @@
+BFS(u){
+	// Step 1: Khởi tạo
+	queue // tạo 1 queue rỗng
+	push(queue, u) // Đẩy đỉnh u vào hàng đợi
+	visited[u] = true; // Đánh dấu đỉnh u đã được thăm
+	// Step 2: Lặp khi mà hàng đợi còn phần tử
+	while(!queue.empty()){
+		v = queue.front(); // Lấy đỉnh ở đầu hàng đợi
+		queue.pop(); // Xóa đỉnh khỏi đầu hàng đợi
+		< Thăm đỉnh v>;
+		// Duyệt các đỉnh kề với v mà chưa được thăm và đẩy vào hàng đợi
+		for(int x:ke[v]){
+			if(!visited[x]){
+				// Nếu x chưa được thăm
+				push(queue,x);
+				visited[x] = true;
+			}
+		}
+	}
+}
